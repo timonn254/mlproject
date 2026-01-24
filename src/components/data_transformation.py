@@ -115,8 +115,7 @@ class DataTransformation:
 
             save_object(
 
-                file_path=self.data_transformation_config.preprocessor_ob_file_path,
-                obj=preprocessing_obj
+                file_path==self.data_transformation_config.preprocessor_ob_file_path,objct=preprocessing_obj
 
 
             )
@@ -127,6 +126,6 @@ class DataTransformation:
                 self.data_transformation_config.preprocessor_ob_file_path,
             )
 
-        except:
-            pass
+        except Exception as e:
+            raise CustomException(e,sys)
 
